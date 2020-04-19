@@ -1,0 +1,4 @@
+/*****************************************parser file**********************************************/
+
+This folder contains python script to make parsing to svd file of stm (arm) 
+to make masking of each peripheral 

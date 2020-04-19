@@ -1,0 +1,10 @@
+/**************************************MAKEFILE********************************************/
+
+1) this folder contains :
+a)python file which generate progress bar while compiling 
+b)batch file which contains script to read value from txt file
+c)makefile which generates the object files and dependancies files and executable file of
+   c project and also call python and batch file to draw progress bar
+
+
+/******************************************************************************************/

@@ -1,0 +1,1044 @@
+%-- 12/10/2019 9:17 AM --%
+x=[2,3,4;5,6,23;77,5,4]
+y=[0,7,6;4,63,2;7,51,44]
+z=[0,7,6;4,63,2]
+c=[x;y]
+d=[x,y]
+mul x.*y
+mul=x*y
+mul2=x.*y
+x'
+sum(x)
+sum(x,2)
+sum(y,'all')
+help sum
+sum(y,3)
+sum(y,2)
+sum(y,1)
+sum(y)
+sum(y,4)
+help product
+help prod
+prod(x,2)
+help max
+max(x)
+min(y)
+min(y,[])
+min(y,[],1)
+min(y,[],2)
+min(y,[],3)
+min(y,[],'all')
+M1 = min(y,[],[1 2])
+min(y,[],1)
+min(y,[],[1 2])
+min(y,[],[1:])
+min(y,[],[1:2])
+min(y,[],[0])
+find(x==0)
+x(:)
+print dir
+print (dir)
+help dir
+cd dir
+ls
+cd (dir)
+help ls
+ls dir
+help delete
+delete
+sort(x)
+sum(sum(x,2)
+sum(sum(x,2))
+min (min(y))
+y
+sort(x)
+~sort(x)
+~sort(~x)
+sort(~x)
+'sort(x)
+sort('x)
+sort(x')
+sort(x)'
+sort(y)'
+sort(y)
+help sort
+sort(y,2)
+sort(y,1)
+datetime('today')
+pwd
+ls(pwd)
+h=1:10:100
+h=1:10
+h=1:100:10
+h=1:10:100
+magic(10,100)
+magic(100)
+linspace(0,100,10)
+linspace(0,10,100)
+szdim = size(z,1)
+szdim = size(z,2)
+szdim[2] = size(z,2)
+szdim[2] = size(z,1)
+s[1:2]=size(z,[1:2])
+s=size(z)
+%-- 12/10/2019 10:04 AM --%
+x=[2,3,4;5,6,23;77,5,4]
+y=[0,7,6;4,63,2;7,51,44]
+z=[0,7,6;4,63,2]
+c=[x;y]
+d=[x,y]
+mul=x*y
+mul2 = x.*y
+x'
+sum(x)
+help sum
+sum(x,2)
+sum(sum(y,2))
+prod(prod(x,2))
+max(x)
+min (min(y))
+help size
+s=size(z)
+help sort
+sort(x)
+linspace(0,10,100)
+save (' data.mat ')
+clear
+load('data.mat')
+load(data.mat)
+load('data.mat')
+datetime("today")
+datetime('today')
+ls('data.mat')
+ls(pwd)
+pwd
+x=[2,3,4;5,6,7;8,9,10]
+x(:)
+y=[23,4,5;1,2,3;7,8,9]
+find(y)
+find(y==0)
+x=[2,3,4;5,6,23;77,5,4]
+y=[0,7,6;4,63,2;7,51,44]
+x(:)
+find(y)
+find(y==0)
+%-- 12/17/2019 1:15 PM --%
+x[100][10]
+%-- 12/17/2019 1:17 PM --%
+x=rand(10,100)
+help rand
+y=rand(5,10,10)
+z=x((1:7),(1:3))+x((1:7),(6:8))
+z=x((1:7),(1:3))
+z=[x((1:7),(1:3)),x((1:7),(6:8))]
+help delete
+help remove
+q=z
+remove(q,q(4,(1:6)))
+remove(q(4,(1:6)))
+help removerows
+q(4,:)=[]
+removerows(q,1)
+x=(1,2,3;4,5,6;7,8,9)
+x=[1,2,3;4,5,6;7,8,9]
+plot(x)
+plot(x,'*')
+plot(z,'*')
+plot(z)
+plot(z,'*r')
+histogram(q)
+pie(q)
+pie(q)
+figure
+plot(x)
+figure
+plot(q)
+figure(1), plot(x), figure(2), plot(y)
+figure
+plot(x)
+figure
+plot(q)
+figure(1)
+plot(z)
+grid on
+figure(1)
+grid on
+b=linspace(0,2,10);
+c=5*x+3
+plot(x,y.'r')
+plot(x,y,'r')
+plot(b,c,'r')
+x=linspace(0,2,10);
+y=5*x+3;
+plot(x,y,'r')
+axis([0,50 0 100])
+xlim([0:300])
+xlim([0:30]);
+axis([0 20 0 30])
+xlim([0 30])
+figure
+axes('position',[0.1,0.1,0.4,0.9])
+plot(b)
+axes('position',[0.5,0.1,0.9,0.9])
+plot(y)
+axes('position',[0.2,0.2,0.4,0.9])
+plot(b)
+axes('position',[0.6,0.2,0.9,0.9])
+plot(y)
+figure
+axes('position',[0.2,0.2,0.4,0.9])
+plot(y)
+axes('position',[0.6,0.2,0.9,0.9])
+plot(b)
+figure
+%-- 12/17/2019 2:26 PM --%
+x=[1,2,3;4,5,6;7,8,9]
+y=[2,3,4;4,5,6;6,3,2]
+figure
+axes('position',[0.1.0.1,0.4,0.9])
+axes('position',[0.1,0.1,0.4,0.9])
+plot(x)
+plot(y),axes('position',[0.5,0.1,0.4,0.9])
+figure
+axes('position',[0.1,0.1,0.4,0.9])
+axes('position',[0.5,0.1,0.4,0.9])
+plot(Y)
+plot(y)
+close all
+m=[24 24 26 26 24]
+n=[15 5 5 15 15];
+plot(m,n,'r')
+fill( m,n,[0.5 0.5 o.5])
+fill( m,n,[0.5 0.5 0.5])
+fill( m,n,[0.5 0.5 0.5],'r')
+fill( m,n,[0.1 0.6 0.4])
+fill( m,n,[0.8 0.1 0.9])
+fill( m,n,[0.1 0.1 0.1])
+fill( m,n,[0.9 0.1 0.1])
+fill( m,n,[0.9 0.2 0.1])
+fill( m,n,[0.9 0.1 0.6])
+ang = 0:0.1:2*pi;
+xp=r*cos(ang)
+r=5;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(x+xp,y+yp)
+plot(m+xp,n+yp)
+x1=x+xp
+ang = 0:0.1:2*pi;
+r=5;
+x=7;
+y=9;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+graph
+figure
+ang = 0:5:2*pi;
+y=9;
+x=7;
+r=5;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+ang = 0:1:2*pi;
+plot(xp,yp)
+figure
+ang = 0:1:2*pi;
+r=5;
+x=7;
+y=9;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+ang = 0:0.9:2*pi;
+x=7;
+y=9;
+r=5;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+ang = 0:1.3:2*pi;
+y=9;
+r=5;
+x=7;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+ang = 0:1.1:2*pi;
+r=5;
+x=10;
+y=10;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+ang = 0:0.9:2*pi;
+x=10;
+y=10;
+r=5;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+r=5;
+x=7;
+y=9;
+ang = 0:1:2*pi;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+fill(xp,yp,[0.5 0.5 0.5])
+gtext('donia')
+figure(1)
+r=2
+ang = 0:0.1:2*pi;
+yp=r*sin(ang);
+xp=r*cos(ang)
+plot(xp,yp)
+r=3;
+ang = 0:1:2*pi;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+hold on
+r=5;
+ang = 0:0.1:2*pi;
+xp=r*cos(ang)
+yp=r*sin(ang);
+plot(xp,yp)
+sub plot(3,3,4)
+subs plot(3,3,4)
+subplot(3,3,6)
+r=5;
+yp=r*sin(ang);
+xp=r*cos(ang)
+plot(xp,yp)
+subplot(3,3,4)
+r=8;
+yp=r*sin(ang);
+xp=r*cos(ang)
+plot(xp,yp)
+subplot(3,3,1)
+ang = 0:5:2*pi;
+yp=r*sin(ang);
+xp=r*cos(ang)
+plot(xp,yp)
+save lec2.mat
+clear
+syms y
+x=y*2+4;
+figure
+ezplot(x,[1,10])
+i=1:1:10
+for i=1:1:10
+disp(i)
+end
+i
+Untitled
+%-- 12/21/2019 10:34 PM --%
+figure
+w=20;
+w=10;
+h=40;
+traffic=zeros(w,h);
+plot (traffic)
+plot traffic
+figure
+rectangle('Position',[0 0 2 4],'Curvature',0.2)
+figure
+subplot(3,3,2)
+rectangle('Position',[0 0 2 4],'Curvature',0.2)
+figure
+rectangle('Position',[4 4 2 4],'Curvature',0.2)
+axes ('position',[0.3,0.3,0.7,0.6])
+figure
+m=[24 24 26 26 24];
+n=[15 5 5 15 15];
+plot(m,n,'r')
+figure
+rectangle('Position',[4 4 6 10],'Curvature',0.2)
+axis([0 50 0 50])
+rectangle('Position',[20 30 20 45],'Curvature',0.2)
+rectangle('Position',[15 20 30 40],'Curvature',0.2)
+axis([0 70 0 70])
+axis([0 80 0 80])
+axis([-10 80 -10 80])
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[15 20 30 40],'Curvature',0.2)
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2)
+figure 2
+figure2
+plot(figure 2)
+plot(figure2)
+figure(2)
+r=5
+x=30
+y=55
+ang=0:0.1:2*pi;
+xp=r*cos(ang);
+yp=r*sin(ang);
+plot(xp,yp)
+figure(1)
+hold on
+plot(xp,yp)
+x=60
+y=55
+xp=r*cos(ang);
+yp=r*sin(ang);
+hold on
+plot(xp,yp)
+r=30
+xp=r*cos(ang);
+yp=r*sin(ang);
+hold on
+plot(xp,yp)
+x=60
+y=55
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+r=5
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[15 20 30 40],'Curvature',0.2)
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2)
+r=5
+x=25;
+y=70;
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2)
+x=35;
+y=70;
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2)
+x=30;
+y=70;
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+y=70;
+fill(xp,yp,[1,0,0])
+x=30;
+y=55;
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+fill(xp,yp,[1,1,0])
+x=30;
+y=35;
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+fill(xp,yp,[0,1,0])
+hold on
+rectangle('Position',[28 0 32 30],'Curvature',0.2)
+rectangle('Position',[28 0 4 30],'Curvature',0.2)
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+hold on
+plot(xp,yp)
+fill(xp,yp,[0,1,0])
+pause(0.5)
+fill(xp,yp,[0,0,0])
+while(!
+while(1)
+fill(xp,yp,[0,1,0])
+pause(0.5)
+fill(xp,yp,[0,0,0])
+}
+while(1)
+fill(xp,yp,[0,1,0])
+pause(0.5)
+fill(xp,yp,[0,0,0])
+pause(0.5)
+end
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+rectangle('Position',[28 0 4 30],'Curvature',0.2,'FaceColor',[1 0 1])
+x=30;
+y=70;
+xp=r*cos(ang)+x;yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+x=30;
+y=50;
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+x=30;
+y=35;
+xp=r*cos(ang)+x;
+yp=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+while(1)
+fill(xp,yp,[0,1,0])
+pause(0.5)
+fill(xp,yp,[0,0,0])
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+rectangle('Position',[28 0 4 30],'Curvature',0.2,'FaceColor',[1 0 1])
+x=30;
+y=50;
+xp1=r*cos(ang)+x;
+yp1=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+xp=r*cos(ang)+x;yp=r*sin(ang)+y;
+figure
+axis([-20 80 -20 80])
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+rectangle('Position',[28 0 4 30],'Curvature',0.2,'Facecolor',[1 0 1])
+x1=30;
+y1=70;
+xp1=r*cos(ang)+x;
+yp1=r*sin(ang)+y;
+hold on
+plot(xp1,yp1)
+x2=30;
+y2=50;
+xp2=r*cos(ang)+x;
+yp2=r*sin(ang)+y;
+hold on
+plot(xp,yp)
+r=5
+ang=0:0.1:2*pi;
+x3=30;
+y3=35;
+xp3=r*cos(ang)+x;
+yp3=r*sin(ang)+y;
+hold on
+plot(xp3,yp3)
+plot(xp2,yp2)
+plot(xp1,yp1)
+while(1)
+fill(xp1,yp1,[1,0,0])
+pause(0.5)
+fill(xp,yp,[0,0,0])
+}
+while(1)
+fill(xp1,yp1,[1 0 0])
+pause(0.5)
+fill(xp1,yp1,[0 0 0])
+pause(0.5)
+fill(xp2,yp2,[1 1 0])
+pause(0.5)
+fill(xp2,yp2,[0 0 0])
+pause(0.5)
+fill(xp3,yp3,[0 1 0])
+pause(0.5)
+fill(xp3,yp3,[0 0 0])
+pause(0.5)
+end
+hold on
+plot(xp1,yp1)
+hold on
+plot(xp2,yp2)
+hold on
+plot(xp3,yp3)
+while(1)
+fill(xp1,yp1,[1 0 0])
+pause(0.5)
+fill(xp1,yp1,[0 0 0])
+pause(0.5)
+fill(xp2,yp2,[1 1 0])
+pause(0.5)
+fill(xp2,yp2,[0 0 0])
+pause(0.5)
+fill(xp3,yp3,[0 1 0])
+pause(0.5)
+fill(xp3,yp3,[0 0 0])
+pause(0.5)
+end
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+hold on
+rectangle('Position',[28 0 4 30],'Curvature',0.2,'Facecolor',[0 1 1])
+x=30;
+r=5
+ang=0:0.1:2*pi;
+xp=r*cos(ang)+x;
+y1=70;
+yp1=r*sin(ang)+y;
+hold on
+plot(xp,yp1)
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+hold on
+rectangle('Position',[28 0 4 30],'Curvature',0.2,'Facecolor',[0 1 1])
+x=30;
+r=5;
+ang=0:0.1:2*pi;
+xp=r*cos(ang)+x;
+y1=70;
+y2=50;
+y3=35;
+yp1=r*sin(ang)+y1;
+yp2=r*sin(ang)+y2;
+yp3=r*sin(ang)+y3;
+hold on
+plot(xp,yp1)
+hold on
+plot(xp,yp2)
+hold on
+plot(xp,yp3)
+>>while(1)
+fill(xp1,yp1,[1 0 0])
+pause(0.5)
+fill(xp1,yp1,[0 0 0])
+pause(0.5)
+fill(xp2,yp2,[1 1 0])
+pause(0.5)
+fill(xp2,yp2,[0 0 0])
+pause(0.5)
+fill(xp3,yp3,[0 1 0])
+pause(0.5)
+fill(xp3,yp3,[0 0 0])
+pause(0.5)
+end
+>>while(1)
+fill(xp,yp1,[1 0 0])
+pause(0.5)
+fill(xp,yp1,[0 0 0])
+pause(0.5)
+fill(xp,yp2,[1 1 0])
+pause(0.5)
+fill(xp,yp2,[0 0 0])
+pause(0.5)
+fill(xp,yp3,[0 1 0])
+pause(0.5)
+fill(xp,yp3,[0 0 0])
+pause(0.5)
+end
+while(1)
+fill(xp1,yp1,[1 0 0])
+pause(0.5)
+fill(xp1,yp1,[0 0 0])
+pause(0.5)
+fill(xp2,yp2,[1 1 0])
+pause(0.5)
+fill(xp2,yp2,[0 0 0])
+pause(0.5)
+fill(xp3,yp3,[0 1 0])
+pause(0.5)
+fill(xp3,yp3,[0 0 0])
+pause(0.5)
+end
+fill(xp,yp3,[0 0 0])
+pause(0.5)
+end
+while(1)
+fill(xp1,yp1,[1 0 0])
+pause(0.5)
+fill(xp1,yp1,[0 0 0])
+pause(0.5)
+fill(xp2,yp2,[1 1 0])
+pause(0.5)
+fill(xp2,yp2,[0 0 0])
+pause(0.5)
+fill(xp3,yp3,[0 1 0])
+pause(0.5)
+pause(0.5)
+end
+fill(xp3,yp3,[0 1 0])
+figure
+%-- 12/22/2019 12:20 AM --%
+figure
+axis([-20 80 -20 80])
+rectangle('Position',[20 30 20 45],'Curvature',0.2,'FaceColor',[0 0 0])
+hold on
+rectangle('Position',[28 0 4 30],'Curvature',0.2,'Facecolor',[0 1 1])
+x=30;
+r=5;
+ang=0:0.1:2*pi;
+xp=r*cos(ang)+x;
+y1=70;
+y2=50;
+y3=35;
+yp1=r*sin(ang)+y1;
+yp2=r*sin(ang)+y2;
+yp3=r*sin(ang)+y3;
+hold on
+plot(xp,yp1)
+hold on
+plot(xp,yp2)
+hold on
+plot(xp,yp3)
+while(1)
+fill(xp1,yp1,[1 0 0])
+pause(0.5)
+fill(xp1,yp1,[0 0 0])
+pause(0.5)
+fill(xp2,yp2,[1 1 0])
+pause(0.5)
+fill(xp2,yp2,[0 0 0])
+pause(0.5)
+fill(xp3,yp3,[0 1 0])
+pause(0.5)
+fill(xp3,yp3,[0 0 0])
+pause(0.5)
+end
+>>while(1)
+fill(xp,yp1,[1 0 0])
+pause(0.5)
+fill(xp,yp1,[0 0 0])
+pause(0.5)
+fill(xp,yp2,[1 1 0])
+pause(0.5)
+fill(xp,yp2,[0 0 0])
+pause(0.5)
+fill(xp,yp3,[0 1 0])
+pause(0.5)
+fill(xp,yp3,[0 0 0])
+pause(0.5)
+end
+while(1)
+fill(xp1,yp1,[1 0 0])
+pause(0.5)
+fill(xp1,yp1,[0 0 0])
+pause(0.5)
+fill(xp2,yp2,[1 1 0])
+pause(0.5)
+fill(xp2,yp2,[0 0 0])
+pause(0.5)
+fill(xp3,yp3,[0 1 0])
+pause(0.5)
+fill(xp3,yp3,[0 0 0])
+pause(0.5)
+end
+while(1)
+fill(xp,yp1,[1 0 0])
+pause(0.5)
+fill(xp,yp1,[0 0 0])
+pause(0.5)
+fill(xp,yp2,[1 1 0])
+pause(0.5)
+fill(xp,yp2,[0 0 0])
+pause(0.5)
+fill(xp,yp3,[0 1 0])
+pause(0.5)
+fill(xp,yp3,[0 0 0])
+pause(0.5)
+end
+histogram(Traffic.m)
+Traffic
+for i = 1:1:
+for i = 1:1:100
+fill(xp,yp1,[1 0 0])
+pause(0.5)
+fill(xp,yp1,[0 0 0])
+pause(0.5)
+fill(xp,yp2,[1 1 0])
+pause(0.5)
+fill(xp,yp2,[0 0 0])
+pause(0.5)
+fill(xp,yp3,[0 1 0])
+pause(0.5)
+fill(xp,yp3,[0 0 0])
+pause(0.5)
+end
+%-- 12/22/2019 12:33 AM --%
+Traffic
+graph
+figure
+axis([-20 80 -20 80])
+axis([-5 5 -7 -6])
+axis([-6 6 -5 5])
+x=[-2.5,-2.7];
+y=[1,3];
+plot(x,y,'r')
+axis([-6 6 -5 5])
+x=[-2.5,-2.3];
+y=[1,3];
+plot(x,y,'r')
+axis([-6 6 -5 5])
+x=[-2.3,-2.1];
+y=[2.5,3];
+hold on
+plot(x,y,'r')
+x=[-2.3,-2.1];
+y=[3,2.5];
+hold on
+plot(x,y,'r')
+x=[-2.1,-1.8];
+y=[2.5,2.5];
+hold on
+plot(x,y,'r')
+N = 25;                                                         % Number Of Points In Complete Circle
+r_angl = linspace(pi/4, 3*pi/4, N);                             % Angle Defining Arc Segment (radians)
+radius = 1.5;                                                   % Arc Radius
+xy_r = circr(radius,r_angl);                                    % Matrix (2xN) Of (x,y) Coordinates
+hold on
+plot(xy_r(1,:), xy_r(2,:), 'bp')
+clc;clear all;close all;
+r = 125; % set the rad of arc is 125m
+l = 180; % set the length of arc is 180m
+n = ((l*180)/r)/pi; % Get the angal of arc degree
+N = [0:0.1:n] % N for angal on arc
+L = (N*pi*r)/180; % L for length for each angal on arc
+R = [0:0.151:125];
+X = r * sin(N);
+Y = r * cos(N);
+plot(X,Y)
+hold off
+hold on
+t=0:.001:1;
+b=(1-t).^2;
+plot(t,bo)
+plot(t,b)
+b=t. ^2
+b=t.^2
+plot(t,b)
+b=2*t.^(1-t)
+plot(t,b)
+t=4:.001:6;
+b=2*t.^(1-t)
+plot(t,b)
+%-- 12/22/2019 7:40 AM --%
+figure
+axis([-6 6 -5 5])
+axis([-6 6 -5 5])
+x=[-2.5,-2.3];
+y=[1,3];
+plot(x,y,'r')
+axis([-6 6 -5 5])
+x=[-2.3,-2.1];
+y=[2.5,3];
+hold on
+plot(x,y,'r')
+x=[-2.3,-2.1];
+y=[3,2.5];
+hold on
+plot(x,y,'r')
+x=[-2.1,-1.8];
+y=[2.5,2.5];
+hold on
+plot(x,y,'r')
+x=[-2.3,-2.1];
+y=[2.5,3];
+hold off
+plot(x,y,'r')
+%-- 12/22/2019 7:50 AM --%
+x=linespace(1,20,50)
+x=linspace(1,20,50)
+t=sin(x)
+plot(y)
+plot("y")
+plot('y')
+plot(y)
+ass1
+figure
+x=(-3.5,-3);
+x={-3.5,-3};
+y={-2.5,-1,5};
+plot(x,y)
+plot(x,y,'r')
+%-- 12/22/2019 8:42 AM --%
+x={-3.5,-3}
+y={-2.5,-1.5};
+graph
+figure
+plot(x,y,'r')
+figure
+axis([-6 6 -5 5])
+axis([-6 6 -5 5])
+x=[-2.5,-2.3];
+y=[1,3];
+axis([-6 6 -5 5])
+axis([-6 6 -5 5])x=[-2.5,-2.3];
+y=[1,3];
+plot(x,y,'r')
+axis([-6 6 -5 5])
+x=[-2.3,-2.1];
+y=[2.5,3];
+hold on
+plot(x,y,'r')
+x=[-2.3,-2.1];
+y=[3,2.5];
+hold on
+plot(x,y,'r')
+x=[-2.1,-1.8];
+y=[2.5,2.5];
+hold on
+plot(x,y,'r')
+x=[-2.3,-2.1];
+axis([-6 6 -5 5])
+axis([-6 6 -5 5])
+x=[-2.5,-2.3];
+y=[1,3];
+plot(x,y,'r')
+axis([-6 6 -5 5])
+x=[-2.3,-2.1];
+y=[3,2.5];
+hold on
+plot(x,y,'r')
+x=[-2.1,-1.8];
+y=[2.5,2.5];
+hold on
+plot(x,y,'r')
+x=[-2.3,-2.1];
+x=[-2.1,-1];
+plot(x,y,'r')
+x=[-2.1,0];
+plot(x,y,'r')
+x=[0,0.2];
+y=[2.5,3];
+hold on
+plot(x,y,'r')
+x=[0.2,0.5];
+y=[3,1];
+hold on
+x=[0.2,0.5];
+plot(x,y,'r')
+Traffic
+X = [-2.5 -2.3];
+Y=[1 -2];
+Xi = mean(X);
+Yi = mean(Y);
+t  = 1:numel(Xa);
+ts = linspace(min(t),max(t),numel(Xa)*10); % has to be a fine grid
+xx = spline(t,Xa,ts);
+yy = spline(t,Ya,ts);
+Xa = [X(1) Xi X(2)];
+Ya = [Y(1) Yi Y(2)];
+t  = 1:numel(Xa);
+ts = linspace(min(t),max(t),numel(Xa)*10); % has to be a fine grid
+xx = spline(t,Xa,ts);
+yy = spline(t,Ya,ts);
+hold on
+plot(xx,yy);
+plot(X,Y,'or');        % end points
+plot(Xi,Yi,'xr');
+c(1)=14;
+c(2)=16;
+x(1)=-2.5;
+y(1)=1;
+R=sqrt((x(1)-c(1))^2+(y(1)-c(2))^2);
+y(2)=4;
+x(2)=c(1)-(sqrt(R^2-(y(2)-c(2))^2));
+apl=sqrt((y(1)-y(2))^2+(x(1)-x(2))^2);
+theta=atand(apl/R);
+a=atan2(y(n)-c(2),x(n)-c(1));
+b=atan2(y(1)-c(2),x(1)-c(1));
+b = mod(b-a,2*pi)+a;
+t = linspace(a,b,50);
+f = c(1)+R*cos(t);
+g = c(2)+R*sin(t);
+plot(f,g);
+hold on;
+n=5
+R=sqrt((x(1)-c(1))^2+(y(1)-c(2))^2);
+y(2)=4;
+x(2)=c(1)-(sqrt(R^2-(y(2)-c(2))^2));
+apl=sqrt((y(1)-y(2))^2+(x(1)-x(2))^2);
+theta=atand(apl/R);
+%%
+a=atan2(y(n)-c(2),x(n)-c(1));
+b=atan2(y(1)-c(2),x(1)-c(1));
+b = mod(b-a,2*pi)+a;
+t = linspace(a,b,50);
+f = c(1)+R*cos(t);
+g = c(2)+R*sin(t);
+plot(f,g);
+hold on;
+r=5;
+theta=0:0.1:pi;
+xp=r*cos(ang);
+xp=r*sin(ang);
+xp=r*cos(ang);
+yp=r*sin(ang);
+plot(xp,yp);
+theta=0:1:pi;
+xp=r*sin(ang);
+xp=r*cos(ang);
+yp=r*sin(ang);
+plot(xp,yp);
+theta=0:5:pi/2;
+xp=r*cos(ang);
+yp=r*sin(ang);
+plot(xp,yp);
+ang=0:20:pi/2;
+xp=r*cos(ang);
+yp=r*sin(ang);
+plot(xp,yp);
+r=3;
+ang=0:20:pi/2;
+xp=r*cos(ang);
+yp=r*sin(ang);
+plot(xp,yp);
+figure
+plot(xp,yp);
+syms x y
+eq1 = ((x/7)^2*sqrt(abs(abs(x)-3)/(abs(x)-3))+(y/3)^2*sqrt(abs(y+3/7*sqrt(33))/(y+3/7*sqrt(33)))-1);
+eq2 = (abs(x/2)-((3*sqrt(33)-7)/112)*x^2-3+sqrt(1-(abs(abs(x)-2)-1)^2)-y);
+eq3 = (9*sqrt(abs((abs(x)-1)*(abs(x)-.75))/((1-abs(x))*(abs(x)-.75)))-8*abs(x)-y);
+eq4 = (3*abs(x)+.75*sqrt(abs((abs(x)-.75)*(abs(x)-.5))/((.75-abs(x))*(abs(x)-.5)))-y);
+eq5 = (2.25*sqrt(abs((x-.5)*(x+.5))/((.5-x)*(.5+x)))-y);
+eq6 = (6*sqrt(10)/7+(1.5-.5*abs(x))*sqrt(abs(abs(x)-1)/(abs(x)-1))-(6*sqrt(10)/14)*sqrt(4-(abs(x)-1)^2)-y);
+axes('Xlim', [-7.25 7.25], 'Ylim', [-5 5]);
+hold on
+ezplot(eq1,[-8 8 -3*sqrt(33)/7 6-4*sqrt(33)/7]);
+ezplot(eq2,[-4 4]);
+ezplot(eq3,[-1 -0.75 -5 5]);
+ezplot(eq3,[0.75 1 -5 5]);
+ezplot(eq4,[-0.75 0.75 2.25 5]);
+ezplot(eq5,[-0.5 0.5 -5 5]);
+ezplot(eq6,[-3 -1 -5 5]);
+ezplot(eq6,[1 3 -5 5]);
+colormap([0 0 1])
+title('Batman');
+xlabel('');
+ylabel('');
+hold off
+Untitled
+syms x y
+Untitled
+eq1 = ((x/7)^2*sqrt(abs(abs(x)-3)/(abs(x)-3))+(y/3)^2*sqrt(abs(y+3/7*sqrt(33))/(y+3/7*sqrt(33))));
+ezplot(eq1,[-8 8 -3*sqrt(33)/7 6-4*sqrt(33)/7]);
+hold on
+ezplot(eq1,[-8 8 -3*sqrt(33)/7 6-4*sqrt(33)/7]);
+eq1 = ((x/7)^2*sqrt(abs(abs(x)-3)/(abs(x)-3))+(y/3)^2*sqrt(abs(y+3/7*sqrt(33))/(y+3/7*sqrt(33)))-1);
+eq2 = (abs(x/2)-((3*sqrt(33)-7)/112)*x^2-3+sqrt(1-(abs(abs(x)-2)-1)^2)-y);
+eq3 = (9*sqrt(abs((abs(x)-1)*(abs(x)-.75))/((1-abs(x))*(abs(x)-.75)))-8*abs(x)-y);
+eq4 = (3*abs(x)+.75*sqrt(abs((abs(x)-.75)*(abs(x)-.5))/((.75-abs(x))*(abs(x)-.5)))-y);
+eq5 = (2.25*sqrt(abs((x-.5)*(x+.5))/((.5-x)*(.5+x)))-y);
+eq6 = (6*sqrt(10)/7+(1.5-.5*abs(x))*sqrt(abs(abs(x)-1)/(abs(x)-1))-(6*sqrt(10)/14)*sqrt(4-(abs(x)-1)^2)-y);
+axes('Xlim', [-7.25 7.25], 'Ylim', [-5 5]);
+hold on
+ezplot(eq1,[-8 8 -3*sqrt(33)/7 6-4*sqrt(33)/7]);
+ezplot(eq2,[-4 4]);
+ezplot(eq3,[-1 -0.75 -5 5]);
+ezplot(eq3,[0.75 1 -5 5]);
+ezplot(eq4,[-0.75 0.75 2.25 5]);
+ezplot(eq5,[-0.5 0.5 -5 5]);
+ezplot(eq6,[-3 -1 -5 5]);
+ezplot(eq6,[1 3 -5 5]);
