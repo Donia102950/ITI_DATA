@@ -38,38 +38,78 @@
  * http://www.freertos.org/a00110.html
  *----------------------------------------------------------*/
 
+/*Set to 1 to use the preemptive RTOS scheduler, or 0 to use the cooperative RTOS scheduler*/
 #define configUSE_PREEMPTION					1
+/*Some FreeRTOS ports have two methods of selecting the next task to execute – a generic method '0', and a method that is specific to that port '1'*/
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION	1
+/*Set to 1 if you wish to use an idle hook, or 0 to omit an idle hook.*/
 #define configUSE_IDLE_HOOK						1
+/*Set to 1 if you wish to use an tick hook, or 0 to omit an tick hook.*/
 #define configUSE_TICK_HOOK						1
+/*If configUSE_TIMERS and configUSE_DAEMON_TASK_STARTUP_HOOK are both set to 1 then the application must define a hook function that has the exact name and prototype as shown below. The hook function will be called exactly once when the RTOS daemon task (also known as the timer service task) executes for the first time. Any application initialisation code that needs the RTOS to be running can be placed in the hook function.
+void void vApplicationDaemonTaskStartupHook( void );*/
 #define configUSE_DAEMON_TASK_STARTUP_HOOK		1
+/*ticktime  The frequency of the RTOS tick interrupt.
+ * a high tick frequency also means that the RTOS kernel will use more CPU time so be less efficient
+ */
 #define configTICK_RATE_HZ						( 1000 ) /* In this non-real time simulated environment the tick frequency has to be at least a multiple of the Win32 tick frequency, and therefore very slow. */
+/*The size of the stack used by the idle task generated*/
 #define configMINIMAL_STACK_SIZE				( ( unsigned short ) 70 ) /* In this simulated case, the stack only has to hold one small structure as the real stack is part of the win32 thread. */
+/*to define heap size*/
 #define configTOTAL_HEAP_SIZE					( ( size_t ) ( 65 * 1024 ) )
+/*The maximum permissible length of the descriptive name given to a task when the task is created.*/
 #define configMAX_TASK_NAME_LEN					( 12 )
+/*Set to 1 if you wish to include additional structure members and functions to assist with execution visualisation and tracing.*/
 #define configUSE_TRACE_FACILITY				1
+/*Defining configUSE_16_BIT_TICKS as 1 causes TickType_t to be defined (typedef’ed) as an unsigned 16bit type. Defining configUSE_16_BIT_TICKS as 0 causes TickType_t to be defined (typedef’ed) as an unsigned 32bit type.*/
 #define configUSE_16_BIT_TICKS					0
+/*This parameter controls the behaviour of tasks at the idle priority. It only has an effect if:
+The preemptive scheduler is being used.
+The application creates tasks that run at the idle priority.
+If configUSE_TIME_SLICING is set to 1 (or undefined) then tasks that share the same priority will time slice and must write it bec my default not found*/
 #define configIDLE_SHOULD_YIELD					1
+/*Set to 1 to include mutex functionality in the build, or 0 to omit mutex functionality from the build*/
 #define configUSE_MUTEXES						1
+/*TO CHECK STACK OVERFLOW*/
 #define configCHECK_FOR_STACK_OVERFLOW			0
+/*Set to 1 to include recursive mutex functionality in the build, or 0 to omit recursive mutex functionality from the build.*/
 #define configUSE_RECURSIVE_MUTEXES				1
+/*It contains the information required by a debugger to locate each registered queue and semaphore.
+ * TO determine size of it */
 #define configQUEUE_REGISTRY_SIZE				20
+
 #define configUSE_APPLICATION_TASK_TAG			1
+/*Set to 1 to include counting semaphore functionality in the build, or 0 to omit counting semaphore functionality from the build.*/
 #define configUSE_COUNTING_SEMAPHORES			1
+/*Set to 1 to include the ‘alternative’ queue functions in the build, or 0 to omit the ‘alternative’ queue functions from the build. The alternative API is described within the queue.h header file. The alternative API is deprecated and should not be used in new designs.*/
 #define configUSE_ALTERNATIVE_API				0
+/*Set to 1 to include queue set functionality (the ability to block, or pend, on multiple queues and semaphores), or 0 to omit queue set functionality.*/
 #define configUSE_QUEUE_SETS					1
+
+/*Setting configUSE_TASK_NOTIFICATIONS to 1 (or leaving configUSE_TASK_NOTIFICATIONS undefined) will include direct to task notification functionality and its associated API in the build.
+Setting configUSE_TASK_NOTIFICATIONS to 0 will exclude direct to task notification functionality and its associated API from the build.
+
+Each task consumes 8 additional bytes of RAM when direct to task notifications are included in the build.*/
 #define configUSE_TASK_NOTIFICATIONS			1
+/*If configSUPPORT_STATIC_ALLOCATION is set to 1 then RTOS objects can be created using RAM provided by the application writer.
+If configSUPPORT_STATIC_ALLOCATION is set to 0 then RTOS objects can only be created using RAM allocated from the FreeRTOS heap.*/
 #define configSUPPORT_STATIC_ALLOCATION			1
+
 
 /* Software timer related configuration options.  The maximum possible task
 priority is configMAX_PRIORITIES - 1.  The priority of the timer task is
 deliberately set higher to ensure it is correctly capped back to
 configMAX_PRIORITIES - 1. */
+/*Set to 1 to include software timer functionality, or 0 to omit software timer functionality*/
 #define configUSE_TIMERS						1
+/*Sets the priority of the software timer service/daemon task.*/
 #define configTIMER_TASK_PRIORITY				( configMAX_PRIORITIES - 1 )
+/*Sets the length of the software timer command queu*/
 #define configTIMER_QUEUE_LENGTH				20
+/*Sets the stack depth allocated to the software timer service/daemon task*/
 #define configTIMER_TASK_STACK_DEPTH			( configMINIMAL_STACK_SIZE * 2 )
 
+/*the max priority can be taken by any task*/
 #define configMAX_PRIORITIES					( 7 )
 
 /* Run time stats gathering configuration options. */
@@ -137,7 +177,13 @@ used with multiple project configurations.  If it is
 	/* Ensure the tick count overflows during the coverage test. */
 	#define configINITIAL_TICK_COUNT 0xffffd800UL
 
-	/* Allows tests of trying to allocate more than the heap has free. */
+	/* Allows tests of trying to allocate more than the heap has free heap1 heap2 and so on . */
+    /*he kernel uses a call to pvPortMalloc() to allocate memory from the heap each time a task, queue or semaphore is created. The official FreeRTOS download includes four sample memory allocation schemes for this purpose. The schemes are implemented in the heap_1.c, heap_2.c, heap_3.c, heap_4.c and heap_5.c source files respectively. configUSE_MALLOC_FAILED_HOOK is only relevant when one of these three sample schemes is being used.
+	The malloc() failed hook function is a hook (or callback) function that, if defined and configured, will be called if pvPortMalloc() ever returns NULL. NULL will be returned only if there is insufficient FreeRTOS heap memory remaining for the requested allocation to succeed.
+
+	If configUSE_MALLOC_FAILED_HOOK is set to 1 then the application must define a malloc() failed hook function. If configUSE_MALLOC_FAILED_HOOK is set to 0 then the malloc() failed hook function will not be called, even if one is defined. Malloc() failed hook functions must have the name and prototype shown below.
+
+	void vApplicationMallocFailedHook( void )*/
 	#define configUSE_MALLOC_FAILED_HOOK			0
 
 	/* To test builds that remove the static qualifier for debug builds. */
