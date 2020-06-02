@@ -1,9 +1,8 @@
-/**************************************************************/
-/* Author : Donia Mohamed                                    */
-/* Date   : 11 feb  2020                                    */
+/***********************************************************/
+/* Author : Donia Mohamed                                  */
+/* Date   : 11 feb  2020                                  */
 /* Version: V01                                            */
-/* Driver : seven segment to control onlu 2 sevensegment  */
-/*********************************************************/
+/***********************************************************/
 
 /*description: to display the number on sevensegment
  * input  : number of sevensegment

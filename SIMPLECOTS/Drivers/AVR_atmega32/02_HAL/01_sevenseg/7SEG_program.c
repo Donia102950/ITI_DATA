@@ -4,11 +4,12 @@
 /* Version: V01                                            */
 /***********************************************************/
 
-/*includes*/
+/**********************************************includes***********************************************************************************************/
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
 #include "DIO_interface.h"
+
 #include "7SEG_interface.h"
 #include "7SEG_config.h"
 
@@ -16,9 +17,8 @@
 u8 LastValue;
 
 /*array of enable ports and pins of all sevensegment*/
-u8 SEVENSEG_Enable_Ports[2]={SevenSeg1_Enable_Port,SevenSeg2_Enable_Port};
-u8 SEVENSEG_Enable_Pins[2]={SevenSeg1_Enable_Pin,SevenSeg2_Enable_Pin};
-
+extern u8 SEVENSEG_Enable_Ports[MAX_SG_NUMBER];
+extern u8 SEVENSEG_Enable_Pins[MAX_SG_NUMBER];
 
 /*description: to display the number on sevensegment
  * input  : number of sevensegment
@@ -31,28 +31,28 @@ void SevenSeg_setnumber(u8 number)
 
 	/*check if common cathode or common anode*/
 	/*if common cathode so it will use array direct*/
-#if SevenSeg_Mode==1
-	setPinValue(SevenSeg_Pin_A_Port,SevenSeg_Pin_A_Number,GET_BIT(SevenSeg_Arr[number],0));
-	setPinValue(SevenSeg_Pin_B_Port,SevenSeg_Pin_B_Number,GET_BIT(SevenSeg_Arr[number],1));
-	setPinValue(SevenSeg_Pin_C_Port,SevenSeg_Pin_C_Number,GET_BIT(SevenSeg_Arr[number],2));
-	setPinValue(SevenSeg_Pin_D_Port,SevenSeg_Pin_D_Number,GET_BIT(SevenSeg_Arr[number],3));
-	setPinValue(SevenSeg_Pin_E_Port,SevenSeg_Pin_E_Number,GET_BIT(SevenSeg_Arr[number],4));
-	setPinValue(SevenSeg_Pin_F_Port,SevenSeg_Pin_F_Number,GET_BIT(SevenSeg_Arr[number],5));
-	setPinValue(SevenSeg_Pin_G_Port,SevenSeg_Pin_G_Number,GET_BIT(SevenSeg_Arr[number],6));
+	#if SevenSeg_Mode==1
+		SetPinValue(SevenSeg_Pin_A_Port,SevenSeg_Pin_A_Number,get_bit(SevenSeg_Arr[number],0));
+		SetPinValue(SevenSeg_Pin_B_Port,SevenSeg_Pin_B_Number,get_bit(SevenSeg_Arr[number],1));
+		SetPinValue(SevenSeg_Pin_C_Port,SevenSeg_Pin_C_Number,get_bit(SevenSeg_Arr[number],2));
+		SetPinValue(SevenSeg_Pin_D_Port,SevenSeg_Pin_D_Number,get_bit(SevenSeg_Arr[number],3));
+		SetPinValue(SevenSeg_Pin_E_Port,SevenSeg_Pin_E_Number,get_bit(SevenSeg_Arr[number],4));
+		SetPinValue(SevenSeg_Pin_F_Port,SevenSeg_Pin_F_Number,get_bit(SevenSeg_Arr[number],5));
+		SetPinValue(SevenSeg_Pin_G_Port,SevenSeg_Pin_G_Number,get_bit(SevenSeg_Arr[number],6));
 
 	/*if common cathode so we will xor value of array */
-#elif SevenSeg_Mode==0
-	setPinValue(SevenSeg_Pin_A_Port,SevenSeg_Pin_A_Number,GET_BIT(SevenSeg_Arr[number],0)^0x01);
-	setPinValue(SevenSeg_Pin_B_Port,SevenSeg_Pin_B_Number,GET_BIT(SevenSeg_Arr[number],1)^0x01);
-	setPinValue(SevenSeg_Pin_C_Port,SevenSeg_Pin_C_Number,GET_BIT(SevenSeg_Arr[number],2)^0x01);
-	setPinValue(SevenSeg_Pin_D_Port,SevenSeg_Pin_D_Number,GET_BIT(SevenSeg_Arr[number],3)^0x01);
-	setPinValue(SevenSeg_Pin_E_Port,SevenSeg_Pin_E_Number,GET_BIT(SevenSeg_Arr[number],4)^0x01);
-	setPinValue(SevenSeg_Pin_F_Port,SevenSeg_Pin_F_Number,GET_BIT(SevenSeg_Arr[number],5)^0x01);
-	setPinValue(SevenSeg_Pin_G_Port,SevenSeg_Pin_G_Number,GET_BIT(SevenSeg_Arr[number],6)^0x01);
-#endif
+	#elif SevenSeg_Mode==0
+		SetPinValue(SevenSeg_Pin_A_Port,SevenSeg_Pin_A_Number,get_bit(SevenSeg_Arr[number],0)^0x01);
+		SetPinValue(SevenSeg_Pin_B_Port,SevenSeg_Pin_B_Number,get_bit(SevenSeg_Arr[number],1)^0x01);
+		SetPinValue(SevenSeg_Pin_C_Port,SevenSeg_Pin_C_Number,get_bit(SevenSeg_Arr[number],2)^0x01);
+		SetPinValue(SevenSeg_Pin_D_Port,SevenSeg_Pin_D_Number,get_bit(SevenSeg_Arr[number],3)^0x01);
+		SetPinValue(SevenSeg_Pin_E_Port,SevenSeg_Pin_E_Number,get_bit(SevenSeg_Arr[number],4)^0x01);
+		SetPinValue(SevenSeg_Pin_F_Port,SevenSeg_Pin_F_Number,get_bit(SevenSeg_Arr[number],5)^0x01);
+		SetPinValue(SevenSeg_Pin_G_Port,SevenSeg_Pin_G_Number,get_bit(SevenSeg_Arr[number],6)^0x01);
+	#endif
 
-	/*to set the last value*/
-	LastValue=number;
+  /*to set the last value*/
+  LastValue=number;
 }
 
 
@@ -65,11 +65,11 @@ void SevenSeg_Enable(u8 SEVENSEG_number)
 
 
 	/*check if common anode or cathode*/
-#if SevenSeg_Mode==1
-	setPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number],SEVENSEG_Enable_Pins[SEVENSEG_number],0);
-#elif SevenSeg_Mode==0
-	setPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number],SEVENSEG_Enable_Pins[SEVENSEG_number],1);
-#endif
+	#if SevenSeg_Mode==1
+		SetPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number],SEVENSEG_Enable_Pins[SEVENSEG_number],0);
+	#elif SevenSeg_Mode==0
+		SetPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number],SEVENSEG_Enable_Pins[SEVENSEG_number],1);
+	#endif
 
 	SevenSeg_setnumber(LastValue);
 }
@@ -81,10 +81,10 @@ void SevenSeg_Enable(u8 SEVENSEG_number)
 void SevenSeg_Disable(u8 SEVENSEG_number2)
 {
 	/*check if common anode or cathode*/
-#if SevenSeg_Mode==1
-	setPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number2],SEVENSEG_Enable_Pins[SEVENSEG_number2],1);
-#elif SevenSeg_Mode==0
-	setPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number2],SEVENSEG_Enable_Pins[SEVENSEG_number2],0);
-#endif
-
+	#if SevenSeg_Mode==1
+		SetPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number2],SEVENSEG_Enable_Pins[SEVENSEG_number2],1);
+	#elif SevenSeg_Mode==0
+		SetPinValue(SEVENSEG_Enable_Ports[SEVENSEG_number2],SEVENSEG_Enable_Pins[SEVENSEG_number2],0);
+	#endif
+	
 }
