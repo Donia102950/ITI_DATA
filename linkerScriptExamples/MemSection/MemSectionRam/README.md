@@ -35,6 +35,3 @@ saved every time in the same place in memory
 
 >   C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot (455).png
 
-![](media/3feaffe667b99f2de84cd808bf155578.png)
-
->   K:\\ALL_ITI_DATA\\3dad55b6-101e-4e13-a02b-0540e8082a61_200x200.png
