@@ -33,5 +33,5 @@ saved every time in the same place in memory
 
 ![](media/1a1b7f118f8d0111f8dc807107d5b866.png)
 
->   C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot (455).png
+
 
