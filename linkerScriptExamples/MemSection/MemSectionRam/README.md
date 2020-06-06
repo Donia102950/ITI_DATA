@@ -6,11 +6,8 @@ saved every time in the same place in memory
 **Steps**
 
 1.  First we need to make specific memory in mem.Id file as shown : DONIA (xrw)
-    : ORIGIN = 0x20000000, LENGTH = 4
 
 ![](media/035bd04a0de8ffff5e5781c57fb4424b.png)
-
->   
 
 1.  Then we need to make specific section in section.Id as shown :
 
@@ -22,6 +19,8 @@ saved every time in the same place in memory
 
 } \>DONIA
 
+C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot (453).png
+
 (media/9b0c3d09c6a4734a786b2ebed18d1867.png)
 
 1.  Then we need to set compiler instruction as shown :
@@ -32,6 +31,3 @@ saved every time in the same place in memory
     memory Donia for Example :
 
 ![](media/1a1b7f118f8d0111f8dc807107d5b866.png)
-
-
-
