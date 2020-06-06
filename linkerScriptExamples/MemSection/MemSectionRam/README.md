@@ -19,9 +19,7 @@ saved every time in the same place in memory
 
 } \>DONIA
 
-C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot (453).png
-
-(media/9b0c3d09c6a4734a786b2ebed18d1867.png)
+![C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot (453).png](media/9b0c3d09c6a4734a786b2ebed18d1867.png)
 
 1.  Then we need to set compiler instruction as shown :
 
