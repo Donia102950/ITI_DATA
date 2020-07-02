@@ -64,11 +64,11 @@
 #define OTG_FS			67 
 
 /*defines of priority group */
-#define ALL_PREEMPTION                 0x00000300
+#define PREEMPTION_ONLY                0x00000300
 #define THREE_PREEMPTION_ONE_SUBGROUP  0x00000400
 #define TWO_PREEMPTION_TWO_SUBGROUP    0x00000500
 #define ONE_PREEMPTION_THREE_SUBGROUP  0x00000600
-#define ALL_SUBGROUP                   0x00000700
+#define SUBGROUP_ONLY                  0x00000700
 
 /*enable function */
 u8 NVIC_uint8enableInterrupt(u8 Interrupt_Number);

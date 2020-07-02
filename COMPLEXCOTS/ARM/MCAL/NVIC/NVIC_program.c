@@ -179,7 +179,7 @@ u8 NVIC_uint8getPending(u8 Interrupt_Number ,u8 *value)
 u8 NVIC_uint8setPriorityGroup(u32 Priority)
 {
 	u8 Local_Error=OK;
-	if (Priority == ALL_PREEMPTION || Priority == THREE_PREEMPTION_ONE_SUBGROUP || Priority == TWO_PREEMPTION_TWO_SUBGROUP || Priority == ONE_PREEMPTION_THREE_SUBGROUP || Priority == ALL_SUBGROUP)
+	if (Priority == PREEMPTION_ONLY || Priority == THREE_PREEMPTION_ONE_SUBGROUP || Priority == TWO_PREEMPTION_TWO_SUBGROUP || Priority == ONE_PREEMPTION_THREE_SUBGROUP || Priority == SUBGROUP_ONLY)
 	{
 		SCB_AIRCR=Priority|PASSWORD_MASK;
 	}
