@@ -268,7 +268,8 @@ void NVIC_voidenableFaultInterrupt(void)
 
 /*Description: Disables Interrupts with lower priority (Higher Written Value)*/
 /*still has a problem so it will be available as soon as possible*/
-/*void NVIC_uint8setPioritybase(u32 Copy_PriorityIndex) {
+#if 0
+void NVIC_uint8setPioritybase(u32 Copy_PriorityIndex) {
 
 	BaseValue = Copy_PriorityIndex ;
 	__asm volatile
@@ -281,9 +282,9 @@ void NVIC_voidenableFaultInterrupt(void)
 	//asm("MOV r1,r3");
 	//asm("MSR BASEPRI, r1");
 	return;
-}*/
+}
 
-
+#endif
 
 
 
