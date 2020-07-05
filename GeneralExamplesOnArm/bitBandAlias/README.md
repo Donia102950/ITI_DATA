@@ -1,1 +1,1 @@
-**BITBandAlias in ARM Cortex M3**1-First open main.c and implement the macro function in M3 Guide as follow to make BitBandAlias ![](3.png)2-There are two cases by changing the bit 3 in register RCC_APB2ENR as follow ![](2.png)![](1.png)
+**BITBandAlias in ARM Cortex M3**1-First open main.c and implement the macro function in M3 Guide as follow to make BitBandAlias ![](3.png)2-There are two cases by changing the bit 3 in register RCC_APB2ENR as follow ![](2.jpg)![](1.jpg)
