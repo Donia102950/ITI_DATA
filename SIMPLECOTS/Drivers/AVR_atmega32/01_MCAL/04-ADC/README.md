@@ -1,0 +1,1 @@
+**Analog to digital converter (SAR) for AVR atmega32**![](adc-features.png)
